@@ -6,6 +6,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
+    font-size:16px;
 }
 .conteinar{
     width: 80%;
@@ -14,16 +15,21 @@
 }
 button{
     color: #FFF;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 600;
     border-radius: 8px;
     background: #FF900E;
     padding:20px 25px;
     margin:10px 0;
     border: none;
+    cursor: pointer;
+    transition:all 0.5s;
+}
+button:hover{
+    background:#ad5d01;
 }
 .description{
-    font-size: 16px;
+    font-size: 1rem;
     color: #727272;
     font-weight: 400;
     line-height: 26px;
@@ -48,12 +54,29 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.2rem;
+    padding-bottom: 3px;
     font-weight:500;
     color:#424242;
+    position:relative;
 }
+/* After hover effect */
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 0%;
+    height:3px;
+    background-color:#FF900E;
+    transition: all 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+/* After hover effect end */
 .logo{
-    font-size: 45px;
+    font-size: 2rem;
     color:#131313;
 }
 .banner-conteinar{
@@ -90,18 +113,18 @@ nav ul li a{
 }
 .feature-heading{
     color: #FF900E;
-    font-size: 45px;
+    font-size: 2.8rem;
     font-weight: 700;
     max-width: 500px;
 }
 .quick-list{
     color:#727272;
-    font-size: 45px;
+    font-size: 2.8rem;
     font-weight: 500;
 }
 .of-our{
     color:#131313;
-    font-size: 45px;
+    font-size: 2.8rem;
     font-weight: 700;
 }
 /* Third Page style */
@@ -127,7 +150,7 @@ nav ul li a{
 }
 .facility-card h4{
     color:#131313;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -148,12 +171,12 @@ nav ul li a{
     color:#fff;
 }
 .experience h1{
-    font-size: 45px;
+    font-size: 2.8rem;
     font-weight: 700;
     line-height: 70px; 
 }
 .experience p{
-    font-size: 25px;
+    font-size: 1.3rem;
     line-height: 40px;
 }
 /* Fourth Page style */
@@ -174,10 +197,42 @@ nav ul li a{
 }
 .card-title{
     color: #727272;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 600;
 }
-
+/* Fifth Page Style */
+.sponspors-text-content{
+    text-align: center;
+    margin-bottom:50px;
+}
+.sponspors-text-content h2{
+    margin-bottom: 24px;
+}
+.sponspors-logo-img{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:130px;
+}
+.sponspors-logo-img img{
+    cursor: pointer;
+    filter: grayscale(100%);
+    scale: 0.9;
+    transition: all 0.5s;
+}
+.sponspors-logo-img img:hover{
+    filter: grayscale(0%);
+    scale: 1;
+}
+/* footer style */
+.footer-title{
+    color: #424242;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding:40px 0;
+    border-radius: 8px;
+    background: #FFF4E7;
+}
 
 
 
@@ -201,15 +256,14 @@ nav ul li a{
     nav ul li{
         margin-left:20px;
     }
-    .logo{
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
-    .banner-heading{
-        font-size:45px
-    }
     .description, .side, .facility-card{
         padding:5px
+    }
+    .sponspors-logo-img{
+        justify-content: space-around;
+    }
+    .sponspors-logo-img img{
+        width: 70px;
     }
     
 
@@ -234,11 +288,7 @@ nav ul li a{
         margin-left:20px;
     }
     .logo{
-        font-size: 40px;
         margin-bottom: 20px;
-    }
-    .banner-heading{
-        font-size:50px
     }
     .fact-card-conteinar{
         justify-content: space-between;
