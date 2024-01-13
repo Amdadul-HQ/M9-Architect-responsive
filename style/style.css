@@ -6,7 +6,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
-    font-size:16px;
+    /* font-size:16px; */
 }
 .conteinar{
     width: 80%;
@@ -74,6 +74,37 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+/* sidevar style */
+.fa-solid{
+    font-size: 2rem;
+    
+}
+.hidemenu{
+    display:none;
+}
+
+.sidevar{
+    position:fixed;
+    top:0;
+    right: 0;
+    width: 100%;
+    background-color:rgba(255, 143, 14, 0.726);
+    height: 100vh;
+    display:none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+.sidevar li a{
+    color:#FFF;
+    font-size: 2rem;
+}
+.fa-solid{
+    display:none;
+}
+
+
 /* After hover effect end */
 .logo{
     font-size: 2rem;
@@ -238,9 +269,15 @@ nav ul li a:hover::after{
 
 @media screen and (max-width:576px) {
     .conteinar, .side{
-        width: 100%;
+        width: 98%;
     }
-    nav,.feature-conteinar,.facility-conteinar,.fact-card-conteinar{
+    .menu{
+        display:none;
+    }
+    .fa-solid,.hidemenu{
+        display: flex;
+    }
+    .feature-conteinar,.facility-conteinar,.fact-card-conteinar{
         flex-direction: column;
     }
     .fact-card-conteinar{
@@ -292,5 +329,8 @@ nav ul li a:hover::after{
     }
     .fact-card-conteinar{
         justify-content: space-between;
+    }
+    .sponspors-logo-img img{
+        width: 100px;
     }
 }

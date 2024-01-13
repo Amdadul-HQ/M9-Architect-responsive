@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Css Link End -->
+    <!-- Css Link Start -->
     <link rel="stylesheet" href="style/style.css">
     <!-- Css Link End -->
+
+    <!-- Icon Link Start -->
+    <script src="https://kit.fontawesome.com/36b38479f0.js" crossorigin="anonymous"></script>
+    <!-- Icon Link End -->
 
     <title>G3 ARCHITECTS</title>
 </head>
@@ -19,11 +23,19 @@
             <!-- Nav start -->
             <nav>
                 <h2 class="logo">G3 Architects</h2>
-                <ul>
+                <ul class="sidevar">
+                    <li onclick=closevar()><i class="fa-solid fa-x"></i></li>
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Contact Us</a></li>
                     <li><a href="">Log In</a></li>
+                </ul>
+                <ul>
+                    <li class="menu"><a href="">Home</a></li>
+                    <li class="menu"><a href="">About</a></li>
+                    <li class="menu"><a href="">Contact Us</a></li>
+                    <li class="menu"><a href="">Log In</a></li>
+                    <li class="hidemenu" onclick=showSidevar()><i class="fa-solid fa-bars"></i></li>
                 </ul>
             </nav>
             <!-- Nav End -->
@@ -168,6 +180,11 @@
         </div>
     </footer>
     <!-- Footer Page End -->
+
+
+    <!-- Js Link Start -->
+    <script src="main.js"></script>
+    <!-- Js Link End -->
 </body>
 
 </html>
